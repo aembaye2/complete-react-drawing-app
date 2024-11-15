@@ -9,9 +9,7 @@ const Navbar = () => {
       <Nav>
         <Bars />
         <NavMenu>
-          <NavLink to="/ActLes09">Activity-L09</NavLink>
-          <NavLink to="/ActLes10">Activity-L10</NavLink>
-          <NavLink to="/ActLes11">Activity-L11</NavLink>
+          <NavLink to="/ActLes09">Activity xx</NavLink>
         </NavMenu>
       </Nav>
     </>

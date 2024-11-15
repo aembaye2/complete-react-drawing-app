@@ -13,7 +13,7 @@ interface DrawingAppProps {
 function DrawingApp({ id }: DrawingAppProps) {
   const [drawingMode, setDrawingMode] = useState("point")
   const [strokeColor, setStrokeColor] = useState("black")
-  const [strokeWidth, setStrokeWidth] = useState(3)
+  const [strokeWidth, setStrokeWidth] = useState(2)
 
   const canvasWidth = 700 //
   const canvasHeight = 500 //500 //
