@@ -1,10 +1,34 @@
 // App.js
-import React from "react"
+import React, { useEffect, useState } from "react"
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import DrawingApp from "./components/DrawingApp"
 import "./App.css"
+import { DrawingApp, modes } from "ae-drawable-canvas"
 
 function App() {
+  const [filteredModes, setFilteredModes] = useState(modes)
+
+  useEffect(() => {
+    if (true) {
+      var x =
+        [
+          "line",
+          "point",
+          "singlearrowhead",
+          "doublearrowhead",
+          "circle",
+          "coordinate",
+          "curve",
+          "curve4pts",
+          "freedraw",
+          "polygon",
+          "rect",
+          "text",
+          "transform",
+        ] || []
+      setFilteredModes(modes.filter((modeObj) => x.includes(modeObj.mode)))
+    }
+  }, [])
+
   return (
     <>
       <div
@@ -42,7 +66,14 @@ function App() {
           </ul>
         </div>
         <div style={{ flex: 2 }}>
-          <DrawingApp />
+          <DrawingApp
+            index={1}
+            AssessName={"Test"}
+            canvasWidth={450}
+            canvasHeight={350}
+            nextButtonClicked={true}
+            modes={filteredModes}
+          />
         </div>
       </div>
     </>
